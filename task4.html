@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>the Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f5f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background-color: #471e4e;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a {
+      color: #fff7f7;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #d38bd6;
+      color: #000;
+    }
+
+    .scrolled {
+      background-color: #2d182f;
+    }
+
+    .section {
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+
+    .home img {
+      width: 180px;
+      border-radius: 10px;
+      margin-top: 20px;
+      object-fit: cover;
+      transition: transform 1s ease;
+    }
+
+    .home img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #471e4e;
+    }
+
+    h2 {
+      color: #5e2e68;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555;
+      max-width: 700px;
+      margin: 10px auto;
+    }
+
+    .about,
+    .skills {
+      background-color: #f4ebf6;
+      margin: 20px auto;
+      border-radius: 10px;
+      padding: 30px 20px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .skills p {
+      background-color: #fff;
+      border-left: 5px solid #9a4ba2;
+      padding: 10px;
+      margin: 10px auto;
+      width: fit-content;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .skills p:hover {
+      background-color: #edd2f0;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #471e4e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar" id="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+  </div>
+
+  <div id="home" class="section home">
+    <h1>Hello, I'm Anushka Maurya</h1>
+    <img src="professional_photo.jpg" alt="My Photo">
+    <p>I’m a beginner web developer learning to build beautiful websites. This is my personal portfolio project made with HTML, CSS, and JavaScript.</p>
+  </div>
+
+  <div id="about" class="section about">
+    <h2>About Me</h2>
+    <p>I am a Computer Science undergraduate passionate about front-end web development. I enjoy creating simple, clean websites and exploring how they work behind the scenes.</p>
+    <p>I recently started learning JavaScript and love making websites interactive. I'm always curious and excited to build new things and improve my skills!</p>
+  </div>
+
+  <div id="skills" class="section skills">
+    <h2>My Skills</h2>
+    <p>HTML & CSS</p>
+    <p>JavaScript (basic)</p>
+    <p>Flask (basic)</p>
+    <p>Django (basic)</p>
+  </div>
+
+  <footer>
+    <a href="https://github.com/Anushka9766">GitHub</a>
+    <a href="https://www.linkedin.com/in/anushka-maurya-bb7104294">LinkedIn</a>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
